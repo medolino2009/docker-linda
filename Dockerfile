@@ -24,18 +24,18 @@ RUN apt-get update \
 #RUN pip install -r /web/requirements.txt
 ### Install Linda wallet
 RUN mkdir -p /home/ubuntu/Linda \
-ENV LINDA_VERSION v3.0.0.0g
-ADD https://github.com/TheLindaProjectInc/Linda/releases/download/v3.0.0.0/Unix.Linda-qt-v3.0.0.0g.tar.gz /home/ubuntu/Linda
-ADD https://github.com/TheLindaProjectInc/Linda/releases/download/v3.0.0.0/Unix.Lindad-v3.0.0.0g.tar.gz /home/ubuntu/Linda
-RUN tar xzf /home/ubuntu/Linda/Unix.Linda-qt-v3.0.0.0g.tar.gz -C /home/ubuntu/Linda
-RUN tar xzf /home/ubuntu/Linda/Unix.Lindad-v3.0.0.0g.tar.gz -C /home/ubuntu/Linda
+ENV LINDA_VERSION v3.1.0.0g
+ADD https://github.com/TheLindaProjectInc/Linda/releases/download/v3.0.0.0/Unix.Linda-qt-v3.1.0.0g.tar.gz /home/ubuntu/Linda
+ADD https://github.com/TheLindaProjectInc/Linda/releases/download/v3.0.0.0/Unix.Lindad-v3.1.0.0g.tar.gz /home/ubuntu/Linda
+RUN tar xzf /home/ubuntu/Linda/Unix.Linda-qt-v3.1.0.0g.tar.gz -C /home/ubuntu/Linda
+RUN tar xzf /home/ubuntu/Linda/Unix.Lindad-v3.1.0.0g.tar.gz -C /home/ubuntu/Linda
 RUN mkdir /home/ubuntu/.Linda
 RUN mkdir /home/ubuntu/linda-wallpapers
 RUN chmod -R 777 /home/ubuntu/Linda/Linda-qt
 RUN chmod -R 777 /home/ubuntu/Linda/Lindad
 RUN chmod -R 777 /home/ubuntu/.Linda
-RUN rm /home/ubuntu/Linda/Unix.Linda-qt-v3.0.0.0g.tar.gz
-RUN rm /home/ubuntu/Linda/Unix.Lindad-v3.0.0.0g.tar.gz
+RUN rm /home/ubuntu/Linda/Unix.Linda-qt-v3.1.0.0g.tar.gz
+RUN rm /home/ubuntu/Linda/Unix.Lindad-v3.1.0.0g.tar.gz
 RUN mkdir -p /home/ubuntu/.config/pcmanfm/LXDE/
 
 # tini for subreap                                   
